@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="./k.css" />
+  </head>
+  <body>
+    
+  <div class="pop">
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Game Description</h2>
+            <p>🎲 In this exciting dice game, two players battle it out to be the first to reach a score of 30! 🏆 Each player takes turns rolling a dice 🎲, and the number rolled is added to their current score. The game continues until one player's score reaches or exceeds 30. 🥳 At that point, the player with the higher score is declared the winner! 🎉 Let the games begin! 💪</p>
+        </div>
+    </div>
+</div>
+    <button onclick="showPopup()" class="description glow-on-hover">About</button>
+
+    <div class="container" id="box">
+      <h1>Dice Game</h1>
+      
+      <h2 id="playertitle">Who is gonna start?</h2>
+      <div class="dice-container">
+        <div class="player" id="player1">
+          <h2>Player 1</h2>
+          <p>Score: <span id="score1">0</span></p>
+          <button type="button" id="rollnow1" onclick="rollDice(1)" class="custom-btn btn-2" >Roll Dice</button>
+        </div>
+        <div class=" dice-image">
+          <img id="rad-img" src="./images/images.jpeg" alt="Dice image" class="rolling-image">
+
+        </div>
+
+        <div class="player" id="player2">
+          <h2>Player 2</h2>
+          <p>Score: <span id="score2">0</span></p>
+          <button type="button"  id="rollnow2" onclick="rollDice(2)" class="custom-btn btn-2" >Roll Dice</button>
+        </div>
+      </div>
+      <div class="winner">
+
+      </div>
+      <button type="button" id="resetBtn"  onclick="resetGame()" class="custom-btn btn-1 resetbtn">Reset Game</button>
+    </div>
+
+    <script src="j.js"></script>
+  </body>
+</html>
